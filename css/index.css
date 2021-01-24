@@ -111,7 +111,6 @@ section {
 
 body {
     line-height: 1;
-    box-sizing: border-box;
 }
 
 
@@ -187,6 +186,45 @@ h5 {
 
 p {
     line-height: 1.4;
+}
+
+hr {
+    margin: 1rem 0;
+}
+
+#about {
+    padding: 0 1.5rem;
+}
+
+#tiles {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.tile {
+    /* use clamp() to set minimum, preferred, and maximum sizes */
+    width: clamp(270px, 370px, 540px);
+    /* older browser support */
+    width: max(270px, min(370px, 540px));
+    margin: 1rem 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.tile_footer {
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.button {
+    padding: 0.65rem 1.8rem;
+    border-radius: 10px;
+    border: 2px solid black;
+    /* inline-block is required to style <span> as button using padding */
+    display: inline-block;
 }
 
 .container {
